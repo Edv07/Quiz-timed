@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Time</title>
     <link rel="stylesheet" type="text/css" href="./style/sheet.css">
+    
 </head>
 <body>
     <div class="container">
-        <h1> Quiz Game</h1>
-        <h1 id="timer"><span>Time left:</span></h1>
-
-<div id= "quiz"> </div>
-
-<button id="submit"> submit </button>
-
-<div id="results"> </div>
-
+        <h1>Quiz Game</h1>
+        
+        <div class="timer-container">
+            <button>High scores</button>
+            
+            <div class="timercount">Time Left: <span id="time"></span></div>
+        </div>
+        
+        <div id="quizArea"></div>
+        
+        <div id="result"></div>
+        
+        <div id="choices"></div>
+        
+        <button id="submit" onclick="checkAnswer()">Submit</button>
+        <div id="results"></div>
     </div>
-    <script src="./Java/quiz.js"></script>
 </body>
+<script src="./Java/quiz.js"></script>
 </html>
