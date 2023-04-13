@@ -16,6 +16,25 @@ body{
 	padding: 20px;
 }
 
+#startBtn{
+  display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    height: 34px;
+    padding: 0 13px;
+    color: #fff;
+    vertical-align: top;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background: #3929cc;
+    border-color: #d4d121;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 16px;
+    font-size: 11px;
+}
+
 .timer-container {
     display: flex;
     align-items: center;
@@ -60,3 +79,22 @@ body{
     background-color: #1ED760;
     height: 48px;
     }
+
+    /* CSS styles for custom radio buttons */
+.ans-buttons {
+  /* Add your custom styles here */
+  /* For example, you can set the appearance to none and add custom styles for the radio button */
+  appearance: none;
+  /* Add custom styles for the radio button */
+  /* Example styles for a custom radio button with a custom background color and size */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  background-color: #fff;
+  /* Add custom styles for the radio button when it is checked */
+  /* Example styles for a custom radio button with a custom background color and border color when checked */
+}
+.custom-radio:checked {
+  background-color: #000;
+  border-color: #fff;
+}

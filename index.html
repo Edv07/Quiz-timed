@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <title>Quiz Time</title>
     <link rel="stylesheet" type="text/css" href="./style/sheet.css">
-    
+
 </head>
+
 <body>
     <div class="container">
         <h1>Quiz Game</h1>
         
         <div class="timer-container">
-            <button>High scores</button>
+            <button id="highScores">High scores</button>
             
             <div class="timercount">Time Left: <span id="time"></span></div>
         </div>
         
         <div id="quizArea"></div>
+        <button id="startBtn" >Start quiz</button>
         
         <div id="result"></div>
         
         <div id="choices"></div>
-        
-        <button id="submit" onclick="checkAnswer()">Submit</button>
-        <div id="results"></div>
+     
+        <button id="submit" style="display: none;" onclick="checkAnswer()">Submit</button>
+        <div id="results"></div>  
+        <button id ="save" style="display: none;">save score?</div>
     </div>
 </body>
-<script src="./Java/quiz.js"></script>
+<script src="/Java/quiz.js"></script>   
 </html>
