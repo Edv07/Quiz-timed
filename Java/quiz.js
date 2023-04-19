@@ -1,3 +1,13 @@
+var highScoreList = document.getElementById("highScoresList");
+
+const highScoresBtn = document.getElementById("highScoresBtn");
+const submitBtn = document.getElementById("submitBtn");
+const startBtn = document.getElementById("startBtn");
+const saveBtn = document.getElementById("saveBtn");
+const results = document.getElementById("results");
+const quizArea = document.getElementById("quizArea");
+const choices = document.getElementById("choices");
+
 // store questions and add questions
 const questions = [
     {
@@ -9,96 +19,96 @@ const questions = [
         d: "Hyper typer mapping logo"
       },
       correctAnswer: "a"
-  //   },
-  //   {
-  //     question: "2/10 What is CSS?",
-  //     answers: {
-  //       a: "Cascading Style Sheets",
-  //       b: "Cascading Sorting System",
-  //       c: "Cascading Selectors Script",
-  //       d: "Cascading Special Styles"
-  //     },
-  //     correctAnswer: "a"
-  //   },
-  //   {
-  //     question: "3/10 What is JavaScript?",
-  //     answers: {
-  //       a: "A live language",
-  //       b: "A programming language",
-  //       c: "A markup language",
-  //       d: "A styling language"
-  //     },
-  //     correctAnswer: "b"
-  //   },
-  //   {
-  //   question: "4/10 What is a URL?",
-  //    answers: {
-  //      a: "Universe routing linking",
-  //      b: "Uniform Resource Locator",
-  //      c: "Unlimited routing lanes",
-  //      d: "Ultimate rapid links"
-  //       },
-  //       correctAnswer: "b"
-  //     },
-  //   {
-  //   question: "5/10 what does div stand for in in HTML",
-  //    answers: {
-  //      a: "divisible",
-  //      b: "division",
-  //      c: "dividable",
-  //      d: "diva"
-  //       },
-  //       correctAnswer: "b"
-  //     },
-  //   {
-  //   question: "6/10 which of these are not HTML elements",
-  //    answers: {
-  //      a: "normal elements",
-  //      b: "raw text elements",
-  //      c: "strict elements",
-  //      d: "void elements"
-  //       },
-  //       correctAnswer: "c"
-  //     },
-  //   {
-  //   question: "7/10 what does nav stand for in html",
-  //    answers: {
-  //      a: "navigation links",
-  //      b: "navigator links",
-  //      c: "navvies links",
-  //      d: "navy blue"
-  //       },
-  //       correctAnswer: ""
-  //     },
-  //   {
-  //   question: "8/10 what does border-color do in css",
-  //    answers: {
-  //      a: " changes the backround ",
-  //      b: " colors the blank spaces ",
-  //      c: " Sets the color of the four borders ",
-  //      d: " something with color "
-  //       },
-  //       correctAnswer: "c"
-  //     },
-  //   {
-  //   question: "9/10 which is NOT a concept of object oriented programming",
-  //    answers: {
-  //      a: "Encapsulation",
-  //      b: "metrication",
-  //      c: "Inheritance",
-  //      d: "Data abstraction"
-  //       },
-  //       correctAnswer: "b"
-  //     },
-  //   {
-  //   question: "10/10 whats 2 + 2",
-  //    answers: {
-  //      a: "1",
-  //      b: "2",
-  //      c: "3",
-  //      d: "4 this was a test question i left in"
-  //       },
-  //       correctAnswer: "d"
+    },
+    {
+      question: "2/10 What is CSS?",
+      answers: {
+        a: "Cascading Style Sheets",
+        b: "Cascading Sorting System",
+        c: "Cascading Selectors Script",
+        d: "Cascading Special Styles"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "3/10 What is JavaScript?",
+      answers: {
+        a: "A live language",
+        b: "A programming language",
+        c: "A markup language",
+        d: "A styling language"
+      },
+      correctAnswer: "b"
+    },
+    {
+    question: "4/10 What is a URL?",
+     answers: {
+       a: "Universe routing linking",
+       b: "Uniform Resource Locator",
+       c: "Unlimited routing lanes",
+       d: "Ultimate rapid links"
+        },
+        correctAnswer: "b"
+      },
+    {
+    question: "5/10 what does div stand for in in HTML",
+     answers: {
+       a: "divisible",
+       b: "division",
+       c: "dividable",
+       d: "diva"
+        },
+        correctAnswer: "b"
+      },
+    {
+    question: "6/10 which of these are not HTML elements",
+     answers: {
+       a: "normal elements",
+       b: "raw text elements",
+       c: "strict elements",
+       d: "void elements"
+        },
+        correctAnswer: "c"
+      },
+    {
+    question: "7/10 what does nav stand for in html",
+     answers: {
+       a: "navigation links",
+       b: "navigator links",
+       c: "navvies links",
+       d: "navy blue"
+        },
+        correctAnswer: "a"
+      },
+    {
+    question: "8/10 what does border-color do in css",
+     answers: {
+       a: " changes the backround ",
+       b: " colors the blank spaces ",
+       c: " Sets the color of the four borders ",
+       d: " something with color "
+        },
+        correctAnswer: "c"
+      },
+    {
+    question: "9/10 which is NOT a concept of object oriented programming",
+     answers: {
+       a: "Encapsulation",
+       b: "metrication",
+       c: "Inheritance",
+       d: "Data abstraction"
+        },
+        correctAnswer: "b"
+      },
+    {
+    question: "10/10 whats 2 + 2",
+     answers: {
+       a: "1",
+       b: "2",
+       c: "3",
+       d: "4 this was a test question i left in"
+        },
+        correctAnswer: "d"
       },
    ];
 
@@ -118,7 +128,7 @@ const questions = [
   function startQuiz() {
     // hide the start quiz button and show the submit button after quiz starts
     startBtn.style.display = "none";
-    submit.style.display = "inline";
+    submitBtn.style.display = "inline";
     displayQuestion(); 
     startTimer();
   };
@@ -145,9 +155,7 @@ const questions = [
       endGame();
     }
   };
-// display question function i used to show the current questions properly
-// first we set up the innerhtml id "quizarea" with questions from the array "questions" in javascript.
-// 
+// the function displayQuestion is used to show the current questions properly with a input for each option
   function displayQuestion() {
     document.getElementById("quizArea").innerHTML = questions[currentQuestion].question;
     const answers = questions[currentQuestion].answers;
@@ -155,7 +163,7 @@ const questions = [
     for (let key in answers) {
       answerList += `<input type='checkbox' name='answer' value='${key}'> ${answers[key]}<br>`;
     }
-    document.getElementById("choices").innerHTML = answerList;
+    choices.innerHTML = answerList;
   };
   
   function startTimer() {
@@ -168,27 +176,51 @@ const questions = [
     }, 1000);
   };
   
+  // clear everything and only display score, save score, time left,
   function endGame() {
     clearInterval(timerInterval);   
-    submit.style.display = "none";
-    save.style.display = "inline";
-    document.getElementById("quizArea").innerHTML = "";
-    document.getElementById("choices").innerHTML = "";
-    document.getElementById("result").innerHTML = `You got ${score} out of ${questions.length} questions correct.`;
+    submitBtn.style.display = "none";
+    saveBtn.style.display = "inline";
+    quizArea.innerHTML = "";
+    choices.innerHTML = "";
+    results.innerHTML = `You got ${score} out of ${questions.length} questions correct.`;
   };
 
-    // ctrl / to get rid of comments
-// function saveScore () {
-//   const initials = prompt("Enter your initials:");
-//   localStorage.setItem("score", score);
-//   const scoreObject = {
-//     score: score,
-//     initials: initials
-//   };
-//   localStorage.setItem("score", JSON.stringify(scoreObject));
-// }
+  // will happen once the quiz is over store the score object with the score and initials 
+function saveScore () { 
+  const initials = prompt("Enter your initials:");
+  const scoreObject = {
+    score: score,
+    initials: initials,
+  };
+  
+  const scores = JSON.parse(localStorage.getItem("scores")) || [];
+  scores.push(scoreObject);
+  localStorage.setItem("scores", JSON.stringify(scores));
+  };
+
+function displayHighScores() {
+  results.innerHTML = "";
+  highScoreList.innerHTML = "";
+  const hs = document.createElement("p");
+  hs.innerText = ("High Scores!");
+  highScoreList.appendChild(hs);
+
+  const scores = JSON.parse(localStorage.getItem("scores"));
+  // to test make sure getItem works
+  // console.log (scores);
+
+  // for loop will create a li for each score object found.
+    for (let i = 0; i < scores.length; i++) {
+      const HSlist = document.createElement("li");
+      HSlist.innerText = `${scores[i].initials} ${scores[i].score + "/10"}`;
+      highScoreList.appendChild(HSlist);
+    }
+  };
 
 
+highScoresBtn.addEventListener("click", displayHighScores);
+submitBtn.addEventListener("click", checkAnswer);
 startBtn.addEventListener("click", startQuiz);
-save.addEventListener("click", saveScore);
- 
+saveBtn.addEventListener("click", saveScore);
+

@@ -12,21 +12,22 @@
         <h1>Quiz Game</h1>
         
         <div class="timer-container">
-            <button id="highScores">High scores</button>
-            
+            <button id="highScoresBtn">High scores</button>
+       
             <div class="timercount">Time Left: <span id="time"></span></div>
-        </div>
+    </div>
         
-        <div id="quizArea"></div>
+        <div id="quizArea"> </div>
+        <div id="highScoresList"> </div>
         <button id="startBtn" >Start quiz</button>
         
-        <div id="result"></div>
+        <div id="result"> </div>
         
-        <div id="choices"></div>
-     
-        <button id="submit" style="display: none;" onclick="checkAnswer()">Submit</button>
-        <div id="results"></div>  
-        <button id ="save" style="display: none;">save score?</div>
+        <div id="choices"> </div>
+                                    <!--can also define events here : onclick="checkAnswer()-->
+        <button id="submitBtn" style="display: none;">Submit</button>
+        <div id="results"> </div>  
+        <button id ="saveBtn" style="display: none;">save score?</div>
     </div>
 </body>
 <script src="/Java/quiz.js"></script>   
