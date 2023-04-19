@@ -2,7 +2,7 @@
 A timed quiz that runs in your browser!
 
 Deployed project
-[here] (https://edv07.github.io/Timed-quiz/) !
+[here](https://edv07.github.io/Timed-quiz/) !
 
 
 
