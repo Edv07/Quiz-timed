@@ -26,6 +26,6 @@ At any time during the quiz, you can view the current question by looking at the
 
 # screenshots
 
-(./assets/web.png)
-(./assets/web2.png)
-(./assets/web3.png)
+(assets/web.png)
+(/assets/web2.png)
+(assets/web3.png)
